@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 const http = require('http');
 const app = require('./lib/app');
-
-http.createServer(app)
-  .listen(7890);
+const PORT = 7890;
+http
+  .createServer(app)
+  .listen(PORT, () => console.log('Server running on', PORT));
