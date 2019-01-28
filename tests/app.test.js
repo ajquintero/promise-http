@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('../lib/app');
 
-jest.mock('../service/RickAndMortyApi.js', () => ({
+jest.mock('../lib/service/RickAndMortyApi.js', () => ({
   getCharacter() {
     return Promise.resolve({
       name: 'Rick Sanchez',
